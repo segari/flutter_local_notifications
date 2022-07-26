@@ -378,6 +378,11 @@ class _HomePageState extends State<HomePage> {
                         value: widget.notificationAppLaunchDetails!
                             .notificationResponse?.payload,
                       ),
+                      _InfoValueString(
+                        title: 'Response type:',
+                        value: widget.notificationAppLaunchDetails!
+                            .notificationResponse?.notificationResponseType,
+                      ),
                     ],
                     PaddedElevatedButton(
                       buttonText: 'Show plain notification with payload',
