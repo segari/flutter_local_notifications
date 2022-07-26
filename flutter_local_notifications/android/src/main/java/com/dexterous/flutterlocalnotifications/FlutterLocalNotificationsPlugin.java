@@ -1443,14 +1443,13 @@ public class FlutterLocalNotificationsPlugin
     if (mainActivity != null) {
       Intent launchIntent = mainActivity.getIntent();
       notificationLaunchedApp =
-              launchIntent != null
-                      && (SELECT_NOTIFICATION.equals(launchIntent.getAction())
-                      || SELECT_FOREGROUND_NOTIFICATION_ACTION.equals(
-                      launchIntent.getAction()))
-                      && !launchedActivityFromHistory(launchIntent);
+          launchIntent != null
+              && (SELECT_NOTIFICATION.equals(launchIntent.getAction())
+                  || SELECT_FOREGROUND_NOTIFICATION_ACTION.equals(launchIntent.getAction()))
+              && !launchedActivityFromHistory(launchIntent);
       if (notificationLaunchedApp) {
         notificationAppLaunchDetails.put(
-                "notificationResponse", extractNotificationResponseMap(launchIntent));
+            "notificationResponse", extractNotificationResponseMap(launchIntent));
       }
     }
 
